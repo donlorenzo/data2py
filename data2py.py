@@ -126,8 +126,8 @@ class ResourceFile(object):
             for d in dirs:
                 self.add_directory(os.path.join(root, d), resourceDir)
 
-    def list(self):
-        return self.resources.keys()
+    def keys(self):
+        return list(self._resources.keys())
 
     def save(self, path):
         content = _resourceTemplate.format(datetime=datetime.utcnow().isoformat(),
