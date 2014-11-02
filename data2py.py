@@ -163,8 +163,7 @@ class ResourceFile(object):
                                module.VERSION)
 
 
-
-if __name__ == '__main__':
+def main():
     help_general = "Convert a data file to a python resource module"
     help_output = "path to where the resource file should be written to."
     help_path = ("path to resource that should be embedded into the"
@@ -180,4 +179,7 @@ if __name__ == '__main__':
         resource_file.add_resource(path)
     resource_file.save(args.outFile)
 
+
+if __name__ == '__main__':
+    main()
 
